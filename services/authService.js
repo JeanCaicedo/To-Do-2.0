@@ -19,7 +19,7 @@ const loginUser = async (email, password) => {
 
   await decryptPassword(password, user.password);
 
-  const token = jwt.sign({ userId: user._id, role: user.role }, 'your_jwt_secret', { expiresIn: '1h' });
+  const token = jwt.sign({ userId: user._id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '1h' });
   return { token };
 };
 

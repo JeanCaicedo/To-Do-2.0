@@ -97,15 +97,13 @@ npm install
 npm start
 ```
 
-Variables de entorno recomendadas (crear `.env`):
+Variables de entorno (copiar `.env.example` a `.env` y completar):
 
 ```env
 PORT=5000
 MONGO_URI=mongodb+srv://usuario:password@cluster/db
 JWT_SECRET=tu_secreto
 ```
-
-> La conexión actual a MongoDB y el secret de JWT están hardcodeados en `config/db.js` y en los servicios. Moverlos a variables de entorno es el siguiente paso pendiente.
 
 ## Notas
 
